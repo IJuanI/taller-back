@@ -1,0 +1,22 @@
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="taller-container taller-panel">
+  <div class="d-flex flex-md-row-reverse pe-md-4 me-md-5">
+    <button mat-flat-button type="button" matTooltip="Agregar Articulo"
+      class="ml-4 px-4" color="primary">
+      Crear Artículo
+    </button>
+  </div>
+  <mat-selection-list [multiple]="false" class="mt-2" *ngIf="initialized">
+    <mat-list-option *ngFor="let article of articles" [value]="article.id"
+      [attr.href]="'article/' + article.id">
+      <div class="d-flex">
+        <span> {{article.title}} </span>
+        <button mat-icon-button type="button" matTooltip="Eliminar Artículo"
+          class="side-icon" color="warn"
+          (click)="deleteArticle(article.id, $event)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</div>

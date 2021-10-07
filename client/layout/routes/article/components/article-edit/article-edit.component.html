@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>{{ data.heading }}</h1>
+<div mat-dialog-content class="d-flex">
+  <form [formGroup]="form">
+    <div class="d-flex">
+      <h3 class="px-0 col-12 col-md-4 mt-3 text-right"> Titulo: </h3>
+      <mat-form-field class="mx-3 my-auto col w-100" appearance="standard">
+        <input matInput formControlName="title"
+          [attr.minLength]="0"
+          [attr.maxLength]="255" required>
+      </mat-form-field>
+    </div>
+    <mat-divider class="my-3"></mat-divider>
+    <div class="d-flex">
+      <h3 class="px-0 col-12 col-md-4 mt-d-3 text-right"> Contenido: </h3>
+      <mat-form-field class="mx-3 my-auto col w-100" appearance="standard">
+        <textarea matInput formControlName="body"
+          [mat-autosize] [matAutosizeMinRows] = "4">
+        </textarea>
+      </mat-form-field>
+    </div>
+</form>
+</div>
+<div mat-dialog-actions class="flex-row-reverse">
+  <button mat-flat-button [mat-dialog-close]="getData()"
+    class="px-3 ms-4" color="primary" cdkFocusInitial>
+    Guardar
+  </button>
+      
+  <button mat-flat-button (click)="onCancel()"
+    class="px-3 ms-4" color="warn">
+    Cancelar
+  </button>
+</div>

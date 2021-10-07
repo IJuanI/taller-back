@@ -1,0 +1,19 @@
+.taller-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.taller-navbar {
+  min-width: 64px;
+}
+
+.taller-content {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 1.5em 1.5em 2em;
+}
+
+.clickable {
+  cursor: pointer;
+}
