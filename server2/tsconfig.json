@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../dist",
+    "types": ["node"],
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "module": "commonjs"
+  },
+  "typeRoots": [
+    "node_modules/@types"
+  ],
+}
