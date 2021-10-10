@@ -12,7 +12,7 @@ Como ejemplo práctico, recomiendo implementar todas las acciones de la carpeta 
 
 ## Instalar el proyecto
 
-Para ejecutar el proyecto, es necesario instalar (NodeJS)[https://nodejs.org/es/download/].
+Para ejecutar el proyecto, es necesario instalar [NodeJS](https://nodejs.org/es/download/).
 
 Además, recomiendo hacer un fork del repositorio de github. Para eso, apretar el botón `fork` en la esquina superior derecha de esta pantalla.
 
